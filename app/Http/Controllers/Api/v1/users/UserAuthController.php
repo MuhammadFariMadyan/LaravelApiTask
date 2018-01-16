@@ -16,12 +16,11 @@ use App\Utils\AppConstant;
 use App\Utils\GetTokens;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
 use Ramsey\Uuid\Uuid;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Validation\Rule;
 use Tymon\JWTAuth\Facades\JWTFactory;
 
 class UserAuthController
@@ -65,7 +64,6 @@ class UserAuthController
             return response()->json($this->setResponse(), AppConstant::UNPROCESSABLE_REQUEST);
         }
 
-        //transaction start
         try {
 
             $password = $request->password;
@@ -104,7 +102,7 @@ class UserAuthController
         $this->setMeta('message', __('auth.register_success'));
         $this->setData("user", $user);
         $this->setData("token", $token);
-        // dd($user);
+
         return response()->json($this->setResponse(), AppConstant::CREATED);
 
     }
@@ -160,6 +158,7 @@ class UserAuthController
         $this->setMeta('message', __('auth.login_success'));
         $this->setData("user", $user);
         $this->setData("token", $token);
+
         return response()->json($this->setResponse(), AppConstant::OK);
     }
 
@@ -193,7 +192,7 @@ class UserAuthController
         }
 
         try {
-            //            Save EmailData in Table
+            // Save EmailData in Table
             foreach ($request->alterEmail as $altEmail) {
 
                 $matchThese = ['user_id' => $userId, 'email' => $altEmail];
@@ -232,7 +231,6 @@ class UserAuthController
      * Handles Update User Multiple mobile requests.
      *
      */
-
     public function addMobileOnly(Request $request)
     {
         $user = $request->user;
@@ -241,7 +239,7 @@ class UserAuthController
         $validator = Validator::make($request->all(),
             [
                 'email' => 'required|email',
-                'alterMobile.*' => 'required|numeric|digits_between:10,10'
+                'alterMobile.*' => 'required|numeric|digits_between:8,15'
             ], [
                 'email.required' => "Email id required",
                 'email.email' => "Please enter valid email in formate",
@@ -258,7 +256,7 @@ class UserAuthController
         }
 
         try {
-            //            Save MobileData in Table
+            // Save MobileData in Table
             foreach ($request->alterMobile as $altMobile) {
 
                 $matchThese = ['user_id' => $userId, 'mobile_no' => $altMobile];
@@ -325,7 +323,7 @@ class UserAuthController
 
         try {
 
-            //check new email id already assign to current user
+            // Check new email id already assign to current user
             $checkNewPwd = ['user_id' => $userId, 'email' => $request->newemail];
             $newEmailModel = UserEmail::where($checkNewPwd)->first();
 
@@ -335,7 +333,7 @@ class UserAuthController
                 return response()->json($this->setResponse(), AppConstant::UNPROCESSABLE_REQUEST);
             }
 
-            //update EmailData in Table
+            // Update EmailData in Table
             $checkOldPwd = ['user_id' => $user->id, 'email' => $request->oldemail];
 
             $emailModel = UserEmail::where($checkOldPwd)->first();
@@ -346,7 +344,7 @@ class UserAuthController
         } catch (QueryException $e) {
             $this->setMeta('status', AppConstant::STATUS_FAIL);
             $this->setMeta('message', __('auth.server_error'));
-//            $this->setMeta('message', $e->getMessage());
+            //$this->setMeta('message', $e->getMessage());
             return response()->json($this->setResponse(), AppConstant::INTERNAL_SERVER_ERROR);
         }
 
@@ -369,12 +367,13 @@ class UserAuthController
 
         $user = $request->user;
         $userId = $user->id;
+        $newMobile = $request->newmobile;
 
         $validator = Validator::make($request->all(),
             [
                 'email' => 'required|email',
-                'oldmobile' => 'required|numeric|digits_between:10,10|exists:user_mobile,mobile_no',
-                'newmobile' => 'required|numeric|digits_between:10,10|different:oldmobile'
+                'oldmobile' => 'required|numeric|digits_between:8,15|exists:user_mobile,mobile_no',
+                'newmobile' => 'required|numeric|digits_between:8,15|different:oldmobile'
             ], [
                 'required' => "Field required",
                 'email' => "Please enter valid email in formate",
@@ -388,7 +387,6 @@ class UserAuthController
             $this->setMeta('message', $validator->messages()->first());
             return response()->json($this->setResponse(), AppConstant::UNPROCESSABLE_REQUEST);
         }
-
 
         try {
             //check new mobile id already assign to current user
@@ -417,9 +415,8 @@ class UserAuthController
         $this->setMeta('status', AppConstant::STATUS_OK);
         $this->setMeta('message', __('auth.user_mobile_updated'));
         $this->setData("user", $user);
+
         return response()->json($this->setResponse(), AppConstant::OK);
-
-
     }
 
     /**
@@ -428,7 +425,6 @@ class UserAuthController
      * Handles Delete User Single mobile requests.
      *
      */
-
     public function deleteMobileOnly(Request $request)
     {
 
@@ -438,7 +434,7 @@ class UserAuthController
         $validator = Validator::make($request->all(),
             [
                 'email' => 'required|email',
-                'mobile' => 'required|numeric|digits_between:10,10|exists:user_mobile,mobile_no',
+                'mobile' => 'required|numeric|digits_between:8,15|exists:user_mobile,mobile_no',
             ], [
                 'required' => "Field required",
                 'email' => "Please enter valid email in formate",
@@ -476,7 +472,6 @@ class UserAuthController
      * Handles Delete User Single Email requests.
      *
      */
-
     public function deleteEmailOnly(Request $request)
     {
 
@@ -499,7 +494,6 @@ class UserAuthController
             return response()->json($this->setResponse(), AppConstant::UNPROCESSABLE_REQUEST);
         }
 
-
         try {
             //delete Mobile in Table
             $checkEmail = ['user_id' => $userId, 'email' => $request->deleteEmail];
@@ -517,7 +511,6 @@ class UserAuthController
         $this->setData("user", $user);
         return response()->json($this->setResponse(), AppConstant::OK);
 
-
     }
 
     /**
@@ -526,7 +519,6 @@ class UserAuthController
      * Handles get user with email and mobile requests.
      *
      */
-
     public function getUser(Request $request)
     {
         try {
