@@ -1,0 +1,328 @@
+.bootstrap-select,
+.bootstrap-select.form-control:not([class*=col-]) {
+    width: 100%
+}
+
+.selectbox-lg + .selectboxit-container .selectboxit-btn {
+    padding: 9px 27px 9px 0;
+    height: 40px;
+    font-size: 14px
+}
+
+.selectbox-sm + .selectboxit-container .selectboxit-btn {
+    padding: 7px 21px 7px 0;
+    height: 36px
+}
+
+.selectbox-xs + .selectboxit-container .selectboxit-btn {
+    padding: 6px 18px 6px 0;
+    height: 34px;
+    font-size: 12px;
+    line-height: 1.6666667
+}
+
+.bootstrap-select > .btn {
+    width: 100%;
+    padding-right: 43px
+}
+
+.bootstrap-select .btn-default {
+    padding: 8px 24px 8px 0;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-width: 1px 0;
+    font-weight: 400;
+    text-transform: none;
+    border-bottom-color: #ddd;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.bootstrap-select .btn-default.active,
+.bootstrap-select .btn-default.focus,
+.bootstrap-select .btn-default:active,
+.bootstrap-select .btn-default:focus {
+    background-color: transparent;
+    border-bottom-color: #009688;
+    -webkit-box-shadow: 0 1px 0 #009688;
+    box-shadow: 0 1px 0 #009688
+}
+
+.bootstrap-select .btn-default.disabled,
+.bootstrap-select .btn-default[disabled],
+fieldset[disabled] .bootstrap-select .btn-default {
+    border-bottom-style: dashed;
+    background-color: transparent;
+    border-bottom-color: #ddd;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.bootstrap-select.btn-group.open > .btn-default.dropdown-toggle {
+    border-bottom-color: #009688;
+    background-color: transparent;
+    -webkit-box-shadow: 0 1px 0 #009688;
+    box-shadow: 0 1px 0 #009688
+}
+
+.bootstrap-select.form-control {
+    padding: 0;
+    border: 0
+}
+
+.bootstrap-select .popover-title {
+    font-size: 11px;
+    line-height: 1.82;
+    margin-top: 8px;
+    margin-bottom: 1px;
+    font-weight: 400;
+    padding: 8px 16px;
+    color: #999
+}
+
+.bootstrap-select[class*=border-] .btn,
+.bootstrap-select[class*=border-] .dropdown-menu {
+    border-color: inherit
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 220px
+}
+
+.bootstrap-select.fit-width {
+    width: auto !important
+}
+
+.bootstrap-select.btn-group.bs-container {
+    position: absolute
+}
+
+.bootstrap-select.btn-group:not(.input-group-btn),
+.bootstrap-select.btn-group[class*=col-] {
+    float: none;
+    display: inline-block;
+    margin-left: 0
+}
+
+.bootstrap-select.btn-group.dropdown-menu-right,
+.bootstrap-select.btn-group[class*=col-].dropdown-menu-right {
+    float: right
+}
+
+.bootstrap-select.btn-group > .disabled:focus {
+    outline: 0
+}
+
+.bootstrap-select.btn-group .btn .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+    text-overflow: ellipsis
+}
+
+.bootstrap-select.btn-group .btn .filter-option > i,
+.bootstrap-select.btn-group .dropdown-menu > li > a [class*=icon-] {
+    margin-right: 16px;
+    float: left;
+    margin-top: 2px;
+    top: 0
+}
+
+.bootstrap-select.btn-group .btn .caret {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    text-align: right;
+    right: 16px;
+    margin-top: -8px
+}
+
+.bootstrap-select.btn-group[class*=col-] .btn {
+    width: 100%
+}
+
+.bootstrap-select.btn-group .btn-default .caret {
+    right: 0
+}
+
+.bootstrap-select.btn-group .btn-lg:not(.btn-default) {
+    padding-right: 43px
+}
+
+.bootstrap-select.btn-group .btn-lg:not(.btn-default) > .caret {
+    right: 18px
+}
+
+.bootstrap-select.btn-group .btn-sm:not(.btn-default) {
+    padding-right: 37px
+}
+
+.bootstrap-select.btn-group .btn-sm:not(.btn-default) > .caret {
+    right: 14px
+}
+
+.bootstrap-select.btn-group .btn-xs:not(.btn-default) {
+    padding-right: 34px
+}
+
+.bootstrap-select.btn-group .btn-xs:not(.btn-default) > .caret {
+    right: 12px
+}
+
+.bootstrap-select.btn-group .dropdown-menu {
+    min-width: 100%
+}
+
+.bootstrap-select.btn-group .dropdown-menu > li > a .check-mark {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 16px;
+    margin-right: 0;
+    color: transparent
+}
+
+.bootstrap-select.btn-group .dropdown-menu > li > a .text {
+    display: inline-block
+}
+
+.bootstrap-select.btn-group .dropdown-menu > li > a > .badge,
+.bootstrap-select.btn-group .dropdown-menu > li > a > .label {
+    float: none
+}
+
+.bootstrap-select.btn-group .dropdown-menu > li > a.special-class,
+.bootstrap-select.btn-group .dropdown-menu > li > a.special-class:hover {
+    font-weight: 700;
+    color: #fff;
+    background-color: #F44336;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none
+}
+
+.bootstrap-select.btn-group .dropdown-menu > li small {
+    padding-left: 10px
+}
+
+.bootstrap-select.btn-group .dropdown-menu > .selected > a {
+    background-color: #26A69A;
+    color: #fff
+}
+
+.bootstrap-select.btn-group .dropdown-menu > .selected > a small {
+    color: #fff
+}
+
+.bootstrap-select.btn-group .dropdown-menu.inner {
+    position: static;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.bootstrap-select.btn-group .dropdown-menu .notify {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px 16px;
+    background-color: #f8f8f8;
+    border-top: 1px solid transparent;
+    pointer-events: none
+}
+
+.bootstrap-select.btn-group .dropdown-header ~ li > a {
+    padding-left: 32px
+}
+
+.bootstrap-select.btn-group .no-results {
+    padding: 8px 16px;
+    background: #f8f8f8;
+    margin-bottom: -8px;
+    border-top: 1px solid transparent
+}
+
+.bootstrap-select.btn-group.fit-width .btn .caret,
+.bootstrap-select.btn-group.fit-width .btn .filter-option {
+    position: static
+}
+
+.bootstrap-select.btn-group.show-tick .dropdown-menu > li a .text {
+    margin-right: 48px
+}
+
+.bootstrap-select.btn-group.show-tick .dropdown-menu > li.selected a .check-mark {
+    color: #fff
+}
+
+.input-group .bootstrap-select > .btn {
+    border-radius: 0
+}
+
+.error .bootstrap-select .btn {
+    border: 1px solid #F44336
+}
+
+.control-group.error .bootstrap-select .dropdown-toggle {
+    border-color: #F44336
+}
+
+.bs-actionsbox,
+.bs-searchbox {
+    padding: 8px 16px;
+    margin-bottom: 8px
+}
+
+.bs-searchbox {
+    position: relative;
+    padding-left: 48px
+}
+
+.bs-searchbox:after {
+    content: '\e98e';
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    color: inherit;
+    display: block;
+    font-size: 14px;
+    margin-top: -11px;
+    line-height: 1
+}
+
+.bs-actionsbox {
+    float: left;
+    width: 100%;
+    position: relative
+}
+
+.bs-actionsbox .btn-group button {
+    width: 50%
+}
+
+.bs-searchbox + .bs-actionsbox {
+    padding: 0 16px 8px
+}
+
+select.bs-select-hidden,
+select.selectpicker {
+    display: none !important
+}
+
+.bootstrap-select > select {
+    position: absolute !important;
+    bottom: 0;
+    left: 50%;
+    display: block !important;
+    width: .5px !important;
+    height: 100% !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    border: none
+}

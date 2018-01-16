@@ -1,0 +1,277 @@
+
+.selectboxit-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%
+}
+
+.selectboxit-container * {
+    outline: 0;
+    white-space: nowrap;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.selectboxit-container .selectboxit {
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative
+}
+
+.selectboxit-container .selectboxit:focus {
+    outline: 0
+}
+
+.selectboxit-container .selectboxit-options a,
+.selectboxit-container span {
+    display: block
+}
+
+.selectboxit-container .selectboxit-options {
+    max-height: 250px;
+    width: 100%;
+    padding: 8px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 999;
+    text-align: left
+}
+
+.selectboxit-options .selectboxit-disabled,
+.selectboxit-options .selectboxit-disabled:focus,
+.selectboxit-options .selectboxit-disabled:hover,
+.selectboxit.selectboxit-disabled,
+.selectboxit.selectboxit-disabled:focus,
+.selectboxit.selectboxit-disabled:hover {
+    cursor: not-allowed;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+    filter: alpha(opacity=65)
+}
+
+.selectboxit.selectboxit-disabled,
+.selectboxit.selectboxit-disabled:focus {
+    border-bottom-style: dashed;
+    border-bottom-color: #ddd;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.selectboxit-rendering {
+    display: inline-block !important;
+    visibility: visible !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important
+}
+
+.selectboxit-list {
+    background-color: #fff;
+    margin: 2px 0 0;
+    width: 100%;
+    min-width: 200px;
+    list-style: none;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23)
+}
+
+.selectboxit-optgroup-header,
+.selectboxit-option {
+    margin: 0;
+    list-style-type: none
+}
+
+.selectboxit-list .selectboxit-option-anchor {
+    color: #333
+}
+
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
+    display: block;
+    background-color: #f5f5f5;
+    color: #333
+}
+
+.selectboxit-list > .selectboxit-selected > .selectboxit-option-anchor {
+    background-color: #26A69A;
+    color: #fff
+}
+
+.selectboxit-list > .selectboxit-disabled > .selectboxit-option-anchor {
+    color: #999;
+    cursor: not-allowed
+}
+
+.selectbox-container[class*=border-] > .selectboxit-list {
+    border-color: inherit
+}
+
+.selectbox-container[class*=bg-] > .selectboxit-list {
+    background-color: inherit;
+    border-color: inherit
+}
+
+.selectbox-container[class*=bg-] > .selectboxit-list .selectboxit-option-anchor {
+    color: #fff
+}
+
+.selectbox-container[class*=bg-] > .selectboxit-list > .selectboxit-focus .selectboxit-option-anchor {
+    background-color: rgba(0, 0, 0, .1)
+}
+
+.selectboxit-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color: #ddd;
+    color: #333;
+    height: 38px;
+    padding: 8px 24px 8px 0
+}
+
+.selectboxit-btn.selectboxit-open,
+.selectboxit-btn:focus {
+    border-bottom-color: #009688;
+    -webkit-box-shadow: 0 1px 0 #009688;
+    box-shadow: 0 1px 0 #009688
+}
+
+.selectboxit-btn .selectboxit-arrow-container {
+    right: 0
+}
+
+.input-group .selectboxit-container + .input-group-addon,
+.input-group .selectboxit-container + .input-group-btn {
+    padding-left: 16px
+}
+
+.input-group .selectboxit-container > .selectboxit-btn {
+    border-radius: 0
+}
+
+.input-group .selectboxit-container:last-child > .selectboxit-btn {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px
+}
+
+.input-group > select:first-child + .selectboxit-container > .selectboxit-btn {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px
+}
+
+.selectboxit-text {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left
+}
+
+.selectboxit-default-arrow {
+    position: relative;
+    font-style: normal
+}
+
+.selectboxit-default-arrow:after {
+    content: '\e9c5';
+    display: block;
+    font-size: 16px;
+    line-height: 1
+}
+
+.selectboxit-open .selectboxit-default-arrow:after {
+    content: '\e9c6'
+}
+
+.selectboxit-option .selectboxit-option-anchor {
+    padding: 8px 16px
+}
+
+.selectboxit-optgroup-header {
+    padding: 8px 16px;
+    font-weight: 700;
+    color: #333;
+    font-size: 11px;
+    line-height: 1.82;
+    text-transform: uppercase
+}
+
+.selectboxit-optgroup-header:hover {
+    cursor: default
+}
+
+.bootstrap-select.btn-group .dropdown-menu > li.disabled a,
+.bootstrap-select.btn-group > .disabled {
+    cursor: not-allowed
+}
+
+.selectboxit-optgroup-option .selectboxit-option-anchor {
+    padding-left: 32px;
+    padding-right: 32px
+}
+
+.selectboxit-arrow-container {
+    position: absolute;
+    top: 50%;
+    font-size: 16px;
+    right: 16px;
+    margin-top: -8px;
+    line-height: 1
+}
+
+.selectboxit-arrow-container .selectboxit-arrow[class*=icon-] {
+    top: 0
+}
+
+.selectboxit-arrow-container .caret:after {
+    text-align: right
+}
+
+.selectboxit-option-icon-container {
+    float: left
+}
+
+.selectboxit-option-icon-container > [class*=icon-] {
+    margin-right: 16px;
+    width: auto
+}
+
+.selectboxit-option-icon-container .selectboxit-option-icon-url {
+    height: 20px;
+    width: 20px;
+    background-size: 20px 20px;
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block
+}
+
+.selectboxit-option-first {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px
+}
+
+.selectboxit-optgroup-header + .selectboxit-option-first {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0
+}
+
+.selectboxit-option-last {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px
+}
+
+.selectbox-fixed + .selectboxit-container,
+.selectbox-fixed + .selectboxit-options {
+    width: 250px
+}
+
+.selectbox-auto + .selectboxit-container,
+.selectbox-auto + .selectboxit-options {
+    width: auto
+}

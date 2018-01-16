@@ -1,0 +1,192 @@
+.bootstrap-switch {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: -2px;
+    margin-right: 8px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-transition: all ease-in-out 50ms;
+    -o-transition: all ease-in-out 50ms;
+    transition: all ease-in-out 50ms
+}
+
+.bootstrap-switch .bootstrap-switch-container {
+    display: inline-block;
+    top: 0;
+    border-radius: 3px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.bootstrap-switch.bootstrap-switch-focused {
+    outline: 0
+}
+
+.bootstrap-switch .bootstrap-switch-handle-off,
+.bootstrap-switch .bootstrap-switch-handle-on,
+.bootstrap-switch .bootstrap-switch-label {
+    cursor: pointer;
+    display: inline-block !important;
+    height: 100%;
+    padding: 8px 16px
+}
+
+.bootstrap-switch input[type=checkbox],
+.bootstrap-switch input[type=radio] {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+.bootstrap-switch input[type=checkbox].form-control,
+.bootstrap-switch input[type=radio].form-control {
+    height: auto
+}
+
+.bootstrap-switch.bootstrap-switch-disabled,
+.bootstrap-switch.bootstrap-switch-indeterminate,
+.bootstrap-switch.bootstrap-switch-readonly {
+    cursor: default !important
+}
+
+.bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-disabled .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-label {
+    cursor: default !important;
+    opacity: .5;
+    filter: alpha(opacity=50)
+}
+
+.bootstrap-switch.bootstrap-switch-animate .bootstrap-switch-container {
+    -webkit-transition: margin-left .2s;
+    -o-transition: margin-left .2s;
+    transition: margin-left .2s
+}
+
+.bootstrap-switch.bootstrap-switch-inverse .bootstrap-switch-handle-on {
+    border-radius: 0 2px 2px 0
+}
+
+.bootstrap-switch.bootstrap-switch-inverse .bootstrap-switch-handle-off {
+    border-radius: 2px 0 0 2px
+}
+
+.bootstrap-switch-handle-on,
+.bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-on .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label {
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px
+}
+
+.bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-off .bootstrap-switch-label,
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label {
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px
+}
+
+.bootstrap-switch-handle-off,
+.bootstrap-switch-handle-on {
+    text-align: center;
+    z-index: 1
+}
+
+.bootstrap-switch-handle-off.bootstrap-switch-default,
+.bootstrap-switch-handle-on.bootstrap-switch-default {
+    color: #333;
+    background-color: #eee
+}
+
+.bootstrap-switch-handle-off.bootstrap-switch-primary,
+.bootstrap-switch-handle-on.bootstrap-switch-primary {
+    color: #fff;
+    background-color: #2196F3
+}
+
+.bootstrap-switch-handle-off.bootstrap-switch-danger,
+.bootstrap-switch-handle-on.bootstrap-switch-danger {
+    color: #fff;
+    background-color: #F44336
+}
+
+.bootstrap-switch-handle-off.bootstrap-switch-success,
+.bootstrap-switch-handle-on.bootstrap-switch-success {
+    color: #fff;
+    background-color: #4CAF50
+}
+
+.bootstrap-switch-handle-off.bootstrap-switch-warning,
+.bootstrap-switch-handle-on.bootstrap-switch-warning {
+    color: #fff;
+    background-color: #FF5722
+}
+
+.bootstrap-switch-handle-off.bootstrap-switch-info,
+.bootstrap-switch-handle-on.bootstrap-switch-info {
+    color: #fff;
+    background-color: #00BCD4
+}
+
+.bootstrap-switch-label {
+    text-align: center;
+    z-index: 100;
+    color: #333;
+    background-color: #fff;
+    position: relative;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .1) inset;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1) inset
+}
+
+.bootstrap-switch-label:hover {
+    background-color: #fcfcfc
+}
+
+.bootstrap-switch-label:active {
+    background-color: #fafafa
+}
+
+.bootstrap-switch-label:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 10px;
+    margin-top: -5px;
+    margin-left: -1px;
+    display: inline-block;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd
+}
+
+.bootstrap-switch-large .bootstrap-switch-handle-off,
+.bootstrap-switch-large .bootstrap-switch-handle-on,
+.bootstrap-switch-large .bootstrap-switch-label {
+    padding: 9px 18px
+}
+
+.bootstrap-switch-mini .bootstrap-switch-handle-off,
+.bootstrap-switch-mini .bootstrap-switch-handle-on,
+.bootstrap-switch-mini .bootstrap-switch-label {
+    padding: 6px 12px
+}
+
+.bootstrap-switch-small .bootstrap-switch-handle-off,
+.bootstrap-switch-small .bootstrap-switch-handle-on,
+.bootstrap-switch-small .bootstrap-switch-label {
+    padding: 7px 14px
+}

@@ -1,0 +1,42 @@
+<?php
+
+namespace App\Rules;
+
+use Illuminate\Contracts\Validation\Rule;
+
+class phone implements Rule
+{
+    /**
+     * Create a new rule instance.
+     *
+     * @return void
+     */
+    public function __construct($paramter)
+    {
+        $this->parameter = $paramter;
+    }
+
+    /**
+     * Determine if the validation rule passes.
+     *
+     * @param  string  $attribute
+     * @param  mixed  $value
+     * @return bool
+     */
+    public function passes($attribute, $value)
+    {
+	    $length = (!empty($this->parameter)) ? (int)$this->parameter : 10;
+
+        return preg_match('%^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$%i', $value) && strlen($value) == $length;
+    }
+
+    /**
+     * Get the validation error message.
+     *
+     * @return string
+     */
+    public function message()
+    {
+        return 'The :attribute is invalid.';
+    }
+}

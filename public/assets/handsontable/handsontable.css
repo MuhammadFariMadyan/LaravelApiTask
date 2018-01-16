@@ -1,0 +1,1236 @@
+
+.hot-container {
+    position: relative;
+    -webkit-box-shadow: 0 0 0 1px #ddd;
+    box-shadow: 0 0 0 1px #ddd
+}
+
+.hot-container .ht_master .wtHolder {
+    min-width: 100%
+}
+
+.hot-container.has-scroll {
+    height: 300px;
+    overflow: hidden
+}
+
+@media (max-width: 1024px) {
+    .hot-container {
+        overflow-x: hidden;
+        overflow-y: auto
+    }
+
+    .hot-container .ht_master .wtHolder {
+        max-width: 100%;
+        min-width: auto
+    }
+
+    .hot-container:not(.has-scroll) .wtHolder {
+        height: 100% !important
+    }
+}
+
+.handsontable .table-striped > tbody > tr:nth-of-type(odd) > td:not([class*=bg-]) {
+    background-color: inherit
+}
+
+.handsontable .table-hover > tbody > tr:hover > th {
+    background-color: #f5f5f5
+}
+
+.changeType {
+    border: 0;
+    background-color: transparent;
+    border-radius: 2px;
+    padding: 0;
+    margin-right: 2px;
+    line-height: 16px;
+    margin-top: 2px
+}
+
+.changeType:hover {
+    color: #777
+}
+
+.changeTypeMenu {
+    position: absolute;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 8px 0;
+    display: none;
+    width: 160px;
+    z-index: 1000
+}
+
+.changeTypeMenu li {
+    list-style: none;
+    padding: 8px 40px 8px 16px;
+    cursor: pointer;
+    position: relative
+}
+
+.changeTypeMenu li:hover {
+    background-color: #f5f5f5
+}
+
+.changeTypeMenu li.active:after {
+    content: '\e600';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -8px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1
+}
+
+.handsontable,
+.handsontable .relative {
+    position: relative
+}
+
+.handsontable .hide {
+    display: none
+}
+
+.handsontable.htAutoSize {
+    left: -99000px;
+    position: absolute;
+    top: -99000px
+}
+
+.handsontable .htDimmed {
+    color: #999
+}
+
+.handsontable .wtHider {
+    width: 0
+}
+
+.handsontable .wtSpreader {
+    position: relative;
+    width: 0;
+    height: auto
+}
+
+.handsontable div,
+.handsontable input,
+.handsontable table,
+.handsontable tbody,
+.handsontable td,
+.handsontable textarea,
+.handsontable th,
+.handsontable thead {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.handsontable input,
+.handsontable textarea {
+    min-height: initial
+}
+
+.handsontable .htCore {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    border-width: 0;
+    width: 0;
+    outline-width: 0;
+    max-width: none;
+    max-height: none
+}
+
+.handsontable col,
+.handsontable col.rowHeader {
+    width: 50px
+}
+
+.handsontable td,
+.handsontable th {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+    empty-cells: show;
+    position: relative;
+    padding: 0 4px;
+    overflow: hidden;
+    outline-width: 0;
+    white-space: pre-line
+}
+
+.handsontable td.htNoWrap,
+.handsontable th {
+    white-space: nowrap
+}
+
+.handsontable td.disabled,
+.handsontable th.disabled {
+    background-color: #fafafa;
+    color: #999
+}
+
+.handsontable th {
+    text-align: center;
+    font-weight: 400
+}
+
+.handsontable th:not([class*=bg-]) {
+    background-color: #f5f5f5
+}
+
+.handsontable th.active {
+    background-color: #eee
+}
+
+.handsontable td.area,
+.handsontable td:not([class*=bg-]) {
+    background-color: #fff
+}
+
+.handsontable thead th {
+    padding: 0
+}
+
+.handsontable thead th .relative {
+    padding: 2px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.handsontable td.htInvalid {
+    background-color: #FFEBEE !important
+}
+
+.handsontable td.active {
+    background-color: #f8f8f8
+}
+
+.handsontable td.area {
+    background: -moz-linear-gradient(top, rgba(181, 209, 255, .34) 0, rgba(181, 209, 255, .34) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(181, 209, 255, .34)), color-stop(100%, rgba(181, 209, 255, .34)));
+    background: -webkit-linear-gradient(top, rgba(181, 209, 255, .34) 0, rgba(181, 209, 255, .34) 100%);
+    background: -o-linear-gradient(top, rgba(181, 209, 255, .34) 0, rgba(181, 209, 255, .34) 100%);
+    background: -ms-linear-gradient(top, rgba(181, 209, 255, .34) 0, rgba(181, 209, 255, .34) 100%);
+    background: linear-gradient(to bottom, rgba(181, 209, 255, .34) 0, rgba(181, 209, 255, .34) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57b5d1ff', endColorstr='#57b5d1ff', GradientType=0)
+}
+
+.handsontable th.htNoFrame,
+.handsontable th:first-child.htNoFrame,
+.handsontable tr:first-child th.htNoFrame {
+    border-left-width: 0;
+    background-color: #fff;
+    border-color: #fff
+}
+
+.handsontable .htNoFrame + td,
+.handsontable .htNoFrame + th,
+.handsontable td:first-of-type,
+.handsontable th:first-child,
+.handsontable.htRowHeaders thead tr th:nth-child(2) {
+    border-left: 1px solid #ddd
+}
+
+.handsontable tr:first-child td,
+.handsontable tr:first-child th {
+    border-top: 1px solid #ddd
+}
+
+.ht_master:not(.innerBorderLeft) ~ .handsontable tbody tr th,
+.ht_master:not(.innerBorderLeft) ~ .handsontable:not(.ht_clone_top) thead tr th:first-child {
+    border-right-width: 0
+}
+
+.ht_master:not(.innerBorderTop) thead tr.lastChild th,
+.ht_master:not(.innerBorderTop) thead tr:last-child th,
+.ht_master:not(.innerBorderTop) ~ .handsontable thead tr.lastChild th,
+.ht_master:not(.innerBorderTop) ~ .handsontable thead tr:last-child th {
+    border-bottom-width: 0
+}
+
+.ht_clone_left tbody tr:first-child td,
+.ht_clone_left tbody tr:first-child th,
+.ht_clone_left thead tr:first-child th,
+.ht_clone_top tr:first-child td,
+.ht_clone_top tr:first-child th,
+.ht_clone_top_left_corner tbody tr:first-child td,
+.ht_clone_top_left_corner tbody tr:first-child th,
+.ht_clone_top_left_corner thead tr:first-child th,
+.ht_master tbody tr:first-child td {
+    border-top-color: transparent
+}
+
+.handsontable td:first-child,
+.handsontable th:first-child {
+    border-left-color: transparent
+}
+
+.ht_clone_top td:last-child,
+.ht_clone_top th:last-child,
+.ht_master td:last-child {
+    border-right-color: transparent
+}
+
+.ht_clone_left tbody tr:last-child td,
+.ht_clone_left tbody tr:last-child th,
+.ht_master tbody tr:last-child td,
+.ht_master tbody tr:last-child th {
+    border-bottom-color: transparent
+}
+
+.htColumnHeaders .handsontable tr:first-child td,
+.htRowHeaders.htColumnHeaders .ht_clone_left tbody tr:first-child th,
+.htRowHeaders.htColumnHeaders .ht_clone_top_left_corner tbody tr:first-child th {
+    border-top-color: #ddd
+}
+
+.manualColumnMover,
+.manualRowMover {
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    z-index: 999;
+    cursor: move
+}
+
+.manualColumnMover {
+    left: 0;
+    width: 5px;
+    height: 32px
+}
+
+.manualRowMover {
+    left: -4px;
+    height: 5px;
+    width: 50px
+}
+
+.manualColumnMoverGuide,
+.manualRowMoverGuide {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ddd;
+    display: none;
+    opacity: .25;
+    filter: alpha(opacity=25)
+}
+
+.manualColumnMoverGuide.active,
+.manualColumnResizer.active,
+.manualRowMoverGuide.active,
+.manualRowResizer.active {
+    display: block
+}
+
+.manualColumnMoverGuide.active,
+.manualColumnMoverGuide:hover,
+.manualRowMoverGuide.active,
+.manualRowMoverGuide:hover {
+    background-color: #2196F3
+}
+
+.manualColumnMoverGuide {
+    max-height: 404px
+}
+
+.manualColumnResizerGuide,
+.manualRowResizerGuide {
+    position: fixed;
+    background-color: #999;
+    display: none
+}
+
+.manualColumnResizer.active,
+.manualColumnResizer:hover,
+.manualRowResizer.active,
+.manualRowResizer:hover {
+    background-color: #999
+}
+
+.manualColumnResizer {
+    position: fixed;
+    top: 0;
+    cursor: col-resize;
+    z-index: 110;
+    width: 5px;
+    height: 31px
+}
+
+.manualRowResizer {
+    position: fixed;
+    left: 0;
+    cursor: row-resize;
+    z-index: 110;
+    height: 5px;
+    width: 50px
+}
+
+.manualColumnResizerGuide {
+    right: 0;
+    top: 0;
+    width: 0;
+    border-right: 1px dashed #777;
+    margin-left: 5px
+}
+
+.manualRowResizerGuide {
+    left: 0;
+    bottom: 0;
+    height: 0;
+    border-bottom: 1px dashed #777;
+    margin-top: 5px
+}
+
+.handsontable .columnSorting {
+    position: relative
+}
+
+.handsontable .columnSorting:hover {
+    cursor: pointer
+}
+
+.handsontable .columnSorting.ascending:after,
+.handsontable .columnSorting.descending:after,
+.handsontable .columnSorting:after,
+.handsontable .columnSorting:before {
+    font-family: Icomoon;
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    margin-top: -6px;
+    right: -20px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.handsontable .columnSorting:before {
+    content: '\e9c1';
+    margin-top: -2px
+}
+
+.handsontable .columnSorting:after {
+    content: '\e9c2';
+    margin-top: -10px
+}
+
+.handsontable .columnSorting.ascending:before {
+    content: none
+}
+
+.handsontable .columnSorting.ascending:after {
+    content: '\e9c2'
+}
+
+.handsontable .columnSorting.descending:before {
+    content: none
+}
+
+.handsontable .columnSorting.descending:after {
+    content: '\e9c1'
+}
+
+.handsontable th.afterHiddenColumn,
+.handsontable th.beforeHiddenColumn {
+    position: relative
+}
+
+.handsontable th.afterHiddenColumn:after,
+.handsontable th.afterHiddenColumn:before,
+.handsontable th.beforeHiddenColumn:after,
+.handsontable th.beforeHiddenColumn:before {
+    content: '\25C0';
+    color: #bbb;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    font-size: 5pt
+}
+
+.handsontable th.afterHiddenColumn:before {
+    left: 1px;
+    top: 2px;
+    right: auto;
+    content: '\25B6'
+}
+
+.handsontable thead th.hiddenHeader {
+    display: none
+}
+
+.handsontable td.afterHiddenColumn.firstVisible {
+    border-left: 1px solid #ddd
+}
+
+.wtBorder {
+    position: absolute;
+    font-size: 0;
+    z-index: 10
+}
+
+.wtBorder.hidden {
+    display: none !important
+}
+
+.wtBorder.corner {
+    font-size: 0;
+    cursor: crosshair
+}
+
+.htBorder.htFillBorder {
+    background-color: #F44336;
+    width: 1px;
+    height: 1px
+}
+
+.handsontableInput {
+    border: none;
+    outline-width: 0;
+    margin: 0;
+    padding: 1px 5px 0;
+    font-family: inherit;
+    line-height: 30px;
+    font-size: inherit;
+    resize: none;
+    display: inline-block;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 0 2px #2196F3 inset;
+    box-shadow: 0 0 0 2px #2196F3 inset
+}
+
+.handsontableInputHolder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000
+}
+
+.htSelectEditor {
+    -webkit-appearance: menulist-button !important;
+    position: absolute;
+    width: auto;
+    outline: 0;
+    border-color: #ddd;
+    background-color: transparent
+}
+
+.handsontable .htSubmenu {
+    position: relative
+}
+
+.handsontable .htSubmenu > div:after {
+    content: '\e9c7';
+    font-family: icomoon;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 16px;
+    font-size: 16px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: .8;
+    filter: alpha(opacity=80)
+}
+
+.handsontable .htLeft {
+    text-align: left
+}
+
+.handsontable .htCenter {
+    text-align: center
+}
+
+.handsontable .htRight {
+    text-align: right
+}
+
+.handsontable .htJustify {
+    text-align: justify
+}
+
+.handsontable .htTop {
+    vertical-align: top
+}
+
+.handsontable .htMiddle {
+    vertical-align: middle
+}
+
+.handsontable .htBottom {
+    vertical-align: bottom
+}
+
+.htAutocomplete {
+    padding-right: 20px
+}
+
+.htPlaceholder {
+    color: #999
+}
+
+.htAutocompleteArrow {
+    color: #999;
+    cursor: default;
+    font-size: 0;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    margin-top: -2px;
+    display: inline-block;
+    margin-right: 4px;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent
+}
+
+.handsontable td:hover .htAutocompleteArrow,
+.handsontable th:hover .htAutocompleteArrow {
+    color: #333
+}
+
+.autocompleteEditor,
+.autocompleteEditor .htCore,
+.autocompleteEditor .wtHolder {
+    min-width: 180px
+}
+
+.htCheckboxRendererInput.noValue {
+    opacity: .5;
+    filter: alpha(opacity=50)
+}
+
+.htCheckboxRendererLabel {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0
+}
+
+.htCheckboxRendererLabel > .htCheckboxRendererInput {
+    margin-right: 10px
+}
+
+.htCommentCell {
+    position: relative
+}
+
+.htCommentCell:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 6px solid transparent;
+    border-top: 6px solid red
+}
+
+.htCommentTextArea {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 9px;
+    margin-top: -1px;
+    border-radius: 0 0 3px 3px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
+}
+
+.handsontable.listbox,
+.htContextMenu .htCore {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23)
+}
+
+.handsontable .handsontable.ht_clone_top .wtHider {
+    padding: 0 0 5px
+}
+
+.handsontable.listbox {
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23)
+}
+
+.handsontable.listbox .ht_master table {
+    border-collapse: separate;
+    border: 0
+}
+
+.handsontable.listbox td,
+.handsontable.listbox th,
+.handsontable.listbox tr:first-child td,
+.handsontable.listbox tr:first-child th,
+.handsontable.listbox tr:last-child th {
+    border-color: transparent
+}
+
+.handsontable.listbox td,
+.handsontable.listbox th {
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.handsontable.listbox td.htDimmed {
+    cursor: pointer;
+    color: inherit;
+    font-style: inherit
+}
+
+.handsontable.listbox tr td.current,
+.handsontable.listbox tr:hover td {
+    background-color: #f5f5f5
+}
+
+.ht_clone_top {
+    z-index: 11
+}
+
+.ht_clone_left {
+    z-index: 12
+}
+
+.ht_clone_bottom_left_corner,
+.ht_clone_debug,
+.ht_clone_top_left_corner {
+    z-index: 13
+}
+
+.ht_clone_bottom,
+.ht_clone_left,
+.ht_clone_top,
+.ht_master {
+    overflow: hidden
+}
+
+.ht_master .wtHolder {
+    overflow: auto
+}
+
+.ht_clone_left .wtHolder {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.ht_clone_bottom .wtHolder,
+.ht_clone_top .wtHolder {
+    overflow-x: hidden;
+    overflow-y: hidden
+}
+
+.handsontable td.htSearchResult {
+    background-color: #FFF3E0
+}
+
+.htBordered {
+    border-width: 1px
+}
+
+.htBordered.htTopBorderSolid {
+    border-top-style: solid;
+    border-top-color: #000
+}
+
+.htBordered.htRightBorderSolid {
+    border-right-style: solid;
+    border-right-color: #000
+}
+
+.htBordered.htBottomBorderSolid {
+    border-bottom-style: solid;
+    border-bottom-color: #000
+}
+
+.htBordered.htLeftBorderSolid {
+    border-left-style: solid;
+    border-left-color: #000
+}
+
+.handsontable thead tr:nth-last-child(2) th.htGroupIndicatorContainer {
+    padding-bottom: 5px
+}
+
+.htCollapseButton {
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #f5f5f5;
+    cursor: pointer;
+    margin-bottom: 3px;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4)
+}
+
+.htCollapseButton:after {
+    content: "";
+    height: 300%;
+    width: 1px;
+    display: block;
+    background-color: #ccc;
+    margin-left: 4px;
+    position: absolute;
+    bottom: 10px
+}
+
+thead .htCollapseButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #fff
+}
+
+thead .htCollapseButton:after {
+    height: 1px;
+    width: 700%;
+    right: 10px;
+    top: 4px
+}
+
+.handsontable th .htExpandButton {
+    position: absolute;
+    top: 0;
+    display: none;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4)
+}
+
+.handsontable th .htExpandButton.clickable {
+    display: block
+}
+
+.handsontable thead th .htExpandButton {
+    top: 5px
+}
+
+.collapsibleIndicator {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 5px;
+    border: 1px solid #999;
+    line-height: 10px;
+    color: #333;
+    border-radius: 100px;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-color: #eee;
+    -webkit-box-shadow: 0 0 0 6px #eee;
+    box-shadow: 0 0 0 6px #eee
+}
+
+.handsontable col.hidden {
+    width: 0 !important
+}
+
+.handsontable table tr th.lightRightBorder {
+    border-right: 1px solid #E6E6E6
+}
+
+.handsontable tr.hidden,
+.handsontable tr.hidden td,
+.handsontable tr.hidden th,
+.wtDebugHidden {
+    display: none
+}
+
+.wtDebugVisible {
+    display: block;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-name: wtFadeInFromNone;
+    animation-name: wtFadeInFromNone
+}
+
+@keyframes wtFadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0
+    }
+    1% {
+        display: block;
+        opacity: 0
+    }
+    100% {
+        display: block;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes wtFadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0
+    }
+    1% {
+        display: block;
+        opacity: 0
+    }
+    100% {
+        display: block;
+        opacity: 1
+    }
+}
+
+.handsontable.mobile,
+.handsontable.mobile .wtHolder {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.htContextMenu .ht_master .wtHolder,
+.pika-label {
+    overflow: hidden
+}
+
+.htMobileEditorContainer {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 70%;
+    height: 54pt;
+    background: #f5f5f5;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    z-index: 999;
+    -webkit-text-size-adjust: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.htMobileEditorContainer.active {
+    display: block
+}
+
+.htMobileEditorContainer .inputs {
+    position: absolute;
+    right: 210px;
+    bottom: 10px;
+    top: 10px;
+    left: 14px;
+    height: 38px
+}
+
+.htMobileEditorContainer .inputs textarea {
+    font-size: 13px;
+    border: 1px solid #a1a1a1;
+    -webkit-appearance: none;
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 0;
+    bottom: 0;
+    padding: 8px;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.htMobileEditorContainer .cellPointer,
+.htMobileEditorContainer .cellPointer:before {
+    height: 0;
+    width: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    position: absolute
+}
+
+.htMobileEditorContainer .cellPointer {
+    top: -13px;
+    left: 30px;
+    border-bottom: 13px solid #ebebeb
+}
+
+.htMobileEditorContainer .cellPointer.hidden {
+    display: none
+}
+
+.htMobileEditorContainer .cellPointer:before {
+    content: '';
+    display: block;
+    top: 2px;
+    left: -13px;
+    border-bottom: 13px solid #f5f5f5
+}
+
+.htMobileEditorContainer .moveHandle {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 30px;
+    bottom: 0;
+    cursor: move;
+    z-index: 9999
+}
+
+.htMobileEditorContainer .moveHandle:after {
+    content: "..\a..\a..\a..";
+    white-space: pre;
+    line-height: 10px;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: -8px;
+    color: #ebebeb
+}
+
+.DTS tbody td,
+.DTS tbody th,
+.dataTables_scroll .dataTables_scrollBody td,
+.dataTables_scroll .dataTables_scrollBody th,
+.dataTables_scroll .dataTables_scrollHead td,
+.dataTables_scroll .dataTables_scrollHead th,
+.htContextMenu table tbody tr td {
+    white-space: nowrap
+}
+
+.htMobileEditorContainer .positionControls {
+    width: 205px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0
+}
+
+.htMobileEditorContainer .positionControls > div {
+    width: 50px;
+    height: 100%;
+    float: left
+}
+
+.htMobileEditorContainer .positionControls > div:after {
+    content: " ";
+    display: block;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 50px
+}
+
+.htMobileEditorContainer .downButton:after,
+.htMobileEditorContainer .leftButton:after,
+.htMobileEditorContainer .rightButton:after,
+.htMobileEditorContainer .upButton:after {
+    margin: 21px 0 0 21px;
+    -webkit-transform-origin: 5px;
+    -moz-transform-origin: 5px;
+    -ms-transform-origin: 5px;
+    transform-origin: 5px
+}
+
+.htMobileEditorContainer .leftButton:after {
+    border-top: 2px solid #288ffe;
+    border-left: 2px solid #288ffe;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.htMobileEditorContainer .leftButton:active:after {
+    border-color: #cfcfcf
+}
+
+.htMobileEditorContainer .rightButton:after {
+    border-top: 2px solid #288ffe;
+    border-left: 2px solid #288ffe;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg)
+}
+
+.htMobileEditorContainer .rightButton:active:after {
+    border-color: #cfcfcf
+}
+
+.htMobileEditorContainer .upButton:after {
+    border-top: 2px solid #288ffe;
+    border-left: 2px solid #288ffe;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.htMobileEditorContainer .upButton:active:after {
+    border-color: #cfcfcf
+}
+
+.htMobileEditorContainer .downButton:after {
+    border-top: 2px solid #288ffe;
+    border-left: 2px solid #288ffe;
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg)
+}
+
+.htMobileEditorContainer .downButton:active:after {
+    border-color: #cfcfcf
+}
+
+.topLeftSelectionHandle-HitArea:not(.ht_master .topLeftSelectionHandle-HitArea),
+.topLeftSelectionHandle:not(.ht_master .topLeftSelectionHandle) {
+    z-index: 9999
+}
+
+.bottomRightSelectionHandle,
+.bottomRightSelectionHandle-HitArea,
+.topLeftSelectionHandle,
+.topLeftSelectionHandle-HitArea {
+    left: -10000px;
+    top: -10000px
+}
+
+.handsontable.hide-tween {
+    -webkit-animation: opacity-hide .3s;
+    -o-animation: opacity-hide .3s;
+    animation: opacity-hide .3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+.handsontable.show-tween {
+    -webkit-animation: opacity-show .3s;
+    -o-animation: opacity-show .3s;
+    animation: opacity-show .3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@-webkit-keyframes opacity-hide {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes opacity-hide {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes opacity-show {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes opacity-show {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.htContextMenu {
+    display: none;
+    position: absolute;
+    z-index: 1051
+}
+
+.htContextMenu .ht_clone_corner,
+.htContextMenu .ht_clone_debug,
+.htContextMenu .ht_clone_left,
+.htContextMenu .ht_clone_top {
+    display: none
+}
+
+.htContextMenu .htCore {
+    background-color: #fff;
+    padding: 8px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23)
+}
+
+.htContextMenu table tbody tr td {
+    position: relative;
+    border-width: 0;
+    padding: 0 16px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.htContextMenu table tbody tr td:first-child {
+    border: 0
+}
+
+.htContextMenu table tbody tr td.htDimmed {
+    color: #333
+}
+
+.htContextMenu table tbody tr td.current,
+.htContextMenu table tbody tr td.zeroclipboard-is-hover {
+    background: #f5f5f5
+}
+
+.htContextMenu table tbody tr td.htSeparator {
+    height: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: default
+}
+
+.htContextMenu table tbody tr td.htSeparator > div {
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 8px 0
+}
+
+.htContextMenu table tbody tr td.htDisabled {
+    color: #999
+}
+
+.htContextMenu table tbody tr td.htDisabled,
+.htContextMenu table tbody tr td.htDisabled:hover {
+    cursor: default
+}
+
+.htContextMenu table tbody tr td div span.selected {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -8px;
+    font-size: 0;
+    color: #777
+}
+
+.htContextMenu table tbody tr td div span.selected:after {
+    content: '\e600';
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1
+}
+
+.htContextMenu table tbody tr.htHidden {
+    display: none
+}
+
+.htContextMenuSub_Alignment {
+    margin-top: -8px;
+    margin-left: -1px
+}

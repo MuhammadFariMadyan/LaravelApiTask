@@ -1,0 +1,196 @@
+
+.multiselect {
+    width: 100%;
+    min-width: 100%;
+    text-align: left;
+    padding-right: 32px;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.multiselect.btn-default {
+    border-width: 1px 0;
+    padding: 8px 24px 8px 0;
+    border-radius: 0;
+    text-transform: none;
+    font-weight: 400
+}
+
+.btn-group.open > .multiselect.btn-default.dropdown-toggle,
+.multiselect.btn-default,
+.multiselect.btn-default:active,
+.multiselect.btn-default:focus,
+.multiselect.btn-default:hover {
+    border-color: transparent transparent #ddd;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.btn-group.open > .multiselect.btn-default.dropdown-toggle,
+.multiselect.btn-default:focus {
+    border-bottom-color: #009688;
+    -webkit-box-shadow: 0 1px 0 #009688;
+    box-shadow: 0 1px 0 #009688
+}
+
+.multiselect.btn-default.disabled {
+    border-bottom-style: dashed
+}
+
+.multiselect.btn-default .caret {
+    right: 0
+}
+
+.multiselect .caret {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -8px;
+    width: 16px;
+    text-align: right
+}
+
+.multiselect.btn-lg {
+    padding-right: 36px
+}
+
+.multiselect.btn-lg.btn-default {
+    padding-right: 27px
+}
+
+.multiselect.btn-sm {
+    padding-right: 28px
+}
+
+.multiselect.btn-sm.btn-default {
+    padding-right: 21px
+}
+
+.multiselect.btn-xs {
+    padding-right: 24px
+}
+
+.multiselect.btn-xs.btn-default {
+    padding-right: 18px
+}
+
+.multiselect-container {
+    min-width: 180px;
+    max-height: 250px;
+    overflow-y: auto
+}
+
+.multiselect-container > li,
+.multiselect-container > li > a {
+    padding: 0
+}
+
+.multiselect-container > li > a > label {
+    display: block !important;
+    margin: 0;
+    height: 100%;
+    cursor: pointer;
+    padding: 9px 16px 9px 44px
+}
+
+.navbar-form .multiselect-container > li > a > label {
+    display: block
+}
+
+.multiselect-container > li > a .checker,
+.multiselect-container > li > a .choice {
+    top: 50%;
+    margin-top: -9px;
+    left: 16px
+}
+
+.multiselect-container > li > a.multiselect-all label {
+    font-weight: 500
+}
+
+.multiselect-container > li.disabled > a {
+    background-color: transparent
+}
+
+.multiselect-container > li.disabled > a > label {
+    cursor: not-allowed
+}
+
+.multiselect-container > li.multiselect-group.active > label,
+.multiselect-container > li.multiselect-group > label {
+    margin: 16px 0 0;
+    padding: 9px 15px;
+    font-size: 11px;
+    line-height: 1.82;
+    color: #999;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: default
+}
+
+.multiselect-container > li.multiselect-group.disabled {
+    color: #999
+}
+
+.multiselect-container > li.multiselect-group:first-child.active > label,
+.multiselect-container > li.multiselect-group:first-child > label {
+    margin-top: 8px
+}
+
+.multiselect-container > li.multiselect-group.multiselect-group-clickable > label {
+    cursor: pointer
+}
+
+.multiselect-container > li.multiselect-group.disabled label,
+.multiselect-container > li.multiselect-group.disabled:focus label,
+.multiselect-container > li.multiselect-group.disabled:hover label {
+    background-color: transparent;
+    cursor: not-allowed
+}
+
+.multi-select-full > .btn-group {
+    width: 100%
+}
+
+.multi-select-full > .btn-group .multiselect-container {
+    width: inherit
+}
+
+.multi-select-full + .input-group-btn {
+    padding-left: 16px
+}
+
+.multi-select-fixed > .btn-group > .btn {
+    width: 250px
+}
+
+.multi-select-auto > .btn-group > .btn {
+    width: auto
+}
+
+li.multiselect-filter {
+    position: relative;
+    padding: 8px 16px 8px 44px;
+    margin-bottom: 8px
+}
+
+li.multiselect-filter i {
+    font-size: 14px;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    margin-top: -7px
+}
+
+.btn-group-multiselect {
+    width: 100%
+}
+
+.btn-group-multiselect .btn {
+    float: none
+}
+
+.btn-group-multiselect .multiselect {
+    min-width: 0
+}
